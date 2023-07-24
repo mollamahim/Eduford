@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-image: linear-gradient(180deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 70%) 100%), url(../img/banner.png);
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+.container{
+    width: 80%;
+    margin :auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0%;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex:1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style-type: none;
+    display:inline-block;
+    padding: 8px 12px;
+}
+.nav-links ul li a{
+    text-decoration:none;
+    font-size: 16px;
+    color: #fff;
+}
+.nav-links ul li::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    display: block;
+    background:#e23719;
+    margin:auto;
+    transition:.3s
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box{
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+section.text-box h1 {
+    font-size: 60px;
+}
+
+section.text-box p {
+    font-size: 14px;
+    margin: 10px 0px 50px;
+}
+section.text-box p span {
+    display: block;
+}
+a.hero-btn {
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid #fff;
+    padding: 12px 28px;
+    color: #fff;
+    transition: 0.5s;
+    background: transparent;
+}
+
+a.hero-btn:hover {
+    background: #ff0000;
+    border: #ff0000;
+}
+
+@media (max-width: 640px){
+    .container{
+        width: 90%;
+       
+    }
+    nav {
+        padding: 4% 0%;
+    }
+    
+    section.nav-links {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 252px;
+        height: 100vh;
+        text-align: left;
+        background: red;
+        z-index: 4;
+    }
+    
+    section.nav-links ul li {
+        display: block;
+    }
+    .text-box {
+        width: 80%;
+    }
+    section.text-box h1 {
+        font-size: 22px;
+    }
+
+}
+
+/* course section start */
+.course_row{
+    display: flex;
+    justify-content: space-between;
+
+}
+.title-cap {
+    text-align: center;
+    margin: 76px 0px 46px 0px;
+}
+
+.title-cap h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.title-cap p {
+    color: #666;
+}
+
+.course_box {
+    width: 29%;
+    background: #f9ecf3;
+    padding: 20px 15px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #00000038;
+    transition: .5s;
+}
+.course_box:hover{
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.5);
+}
+
+section.course_box h3 {
+    margin-bottom: 10px;
+}
+section.course_box p {
+    text-align: justify;
+    color: #444242fe;
+}
+/* course section END */
+/* course section media */
+@media (max-width:640px){
+    .course_row{
+        flex-direction: column;
+    }
+    .course_box{
+        width: 100%;
+    }
+    .course_box:hover{
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.5);
+    }
+}
+
+/* campus section style start */
+.campus_row{
+    display: flex;
+    justify-content: space-between;
+}
+.campus_box {
+    width: 30%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 103px;
+    border-radius: 17px;
+}
+section.campus_box img {
+    display: block;
+}
+
+section.hover_text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    transition: all .8s;
+}
+.campus_box:hover .hover_text{
+    top:0%
+}
+
+section.hover_text p {
+    width: 70%;
+    letter-spacing: 1.2px;
+}
+
+section.hover_text h2 {margin: 8px 0px;letter-spacing: 4px;}
+
+/* campus section style END  */
+@media (max-width:640px){
+    .campus_row{
+        flex-direction: column;
+    }
+    .campus_box{
+        width: 100%;
+    }
+}
