@@ -4,6 +4,9 @@
     padding:0;
     font-family: 'Poppins', sans-serif;
 }
+img{
+    max-width: 100%;
+}
 header{
     background-image: linear-gradient(180deg, rgb(0 0 0 / 70%) 0%, rgb(0 0 0 / 70%) 100%), url(../img/banner.png);
     width: 100%;
@@ -184,11 +187,12 @@ section.course_box p {
     width: 30%;
     overflow: hidden;
     position: relative;
-    margin-bottom: 103px;
+    /* margin-bottom: 103px; */
     border-radius: 17px;
 }
 section.campus_box img {
     display: block;
+    width: 100%;
 }
 
 section.hover_text {
@@ -226,3 +230,97 @@ section.hover_text h2 {margin: 8px 0px;letter-spacing: 4px;}
         width: 100%;
     }
 }
+
+/* facilities section style Start  */
+.facilities-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.facilities-box{
+    flex-basis: 32%;
+}
+.facilities-box img{
+    display: block;
+    border-radius: 12px;
+    width: 100%;
+}
+section.facilities-layer {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+section.facilities-layer h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section.facilities-layer p {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* facilities section style END  */
+/* facilities section style madia  */
+@media (max-width:640px){
+    .facilities-row{
+        flex-direction: column;
+    }
+    .facilities-box{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* facilities section style madia  */
+
+/* Testimonials style start */
+.testimonials-row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.testimonial-box{
+    display: flex;
+    flex-basis: 45%;
+    background-color: #fff3f3;
+    padding: 20px;
+    border-radius: 12px;
+}
+section.testimonial-image {
+    flex-basis: 40%;
+    padding: 0 22px;
+}
+
+section.testimonial-image img {
+    border-radius: 50%;
+    display: block;
+    height: 50px;
+}
+section.testimonials-layer p {
+    font-size: 14px;
+    color: #666;
+}
+
+section.testimonials-layer {
+    margin-left: 42px;
+}
+
+section.testimonials-layer h3 {
+    font-weight: 400;
+    margin: 20px 0px 10px;
+}
+.testimonials-layer i {
+    color: #e23719;
+}
+/* Testimonials style END */
+/* Testimonials style media */
+@media (max-width:640px){
+    .testimonials-row{
+        flex-direction: column;
+    }
+    .testimonial-box{
+        margin-bottom: 20px;
+    }
+}
+/* Testimonials style media */
